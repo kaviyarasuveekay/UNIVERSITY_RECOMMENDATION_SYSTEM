@@ -1,1 +1,2 @@
 # UNIVERSITY_RECOMMENDATION_SYSTEM
+The problem statement, hence being tackled, is to design a college recommendation system and to provide a probabilistic insight into college administration for overall rating, cutoffs of the colleges, admission intake and preferences of students. Also, it helps students avoid spending time and money on counsellor and stressful research related to finding a suitable college.
