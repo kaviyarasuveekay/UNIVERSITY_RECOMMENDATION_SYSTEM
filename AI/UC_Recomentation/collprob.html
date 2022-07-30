@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+		<script type="text/javascript">
+
+		    var myform = document.getElementById("form");
+		    $("#myform").submit(function(e) {
+
+			    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+			    var form = $(this);
+			    var url = form.attr('action');
+
+			    jQuery.ajax({
+			           type: "POST",
+			           url: url,
+			           data: form.serialize(), // serializes the form's elements.
+			           success: function(data)
+			           {
+			               alert(data); // show response from the php script.
+			           }
+			         });
+
+
+			});
+		</script>
+	</head>	
+	<body>
+		<form action="http://127.0.0.1:8000/college-prob/" method="POST" id='myform'>
+			<input type='text' name='collegeName'>
+			<input type='text' name='scores'>
+			<input type='submit'>
+		</form>
+	</body>
+</html>
